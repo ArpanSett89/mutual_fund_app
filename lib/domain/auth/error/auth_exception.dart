@@ -1,0 +1,9 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'auth_exception.freezed.dart';
+
+@freezed
+class AuthException with _$AuthException {
+  const factory AuthException.invalidEmailAndPasswordCombination() =
+      _InvalidEmailAndPasswordCombination;
+  const factory AuthException.invalidUserName() = _InvalidUserName;
+}

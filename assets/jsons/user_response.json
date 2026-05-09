@@ -1,0 +1,21 @@
+{
+    "status": true,
+    "message": "User fetch successfully",
+    "data": {
+        "user": {
+            "id": "2b81f745-5438-4f54-8739-d1a6ccc26b59",
+            "full_name": "Test User",
+            "title": "Mr",
+            "phone_number": "9830906976",
+            "date_of_birth": "0000-00-00",
+            "gender": "MALE",
+            "user_name": "BCS16886BS25-TC",
+            "first_name": "Test",
+            "middle_name": "",
+            "last_name": "User",
+            "full_address": "newtown",
+            "email": "",
+            "name": "Test User"
+        }
+    }
+}

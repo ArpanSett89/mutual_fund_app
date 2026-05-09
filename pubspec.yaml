@@ -1,0 +1,40 @@
+name: mutual_fund_app
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  get_it: ^8.0.0
+  flutter_pretty_dio_logger: ^3.0.0
+  flutter_secure_storage: ^9.2.2
+  dartz: ^0.10.1
+  dio: ^5.7.1
+  flutter_bloc: ^9.1.1
+  auto_route: ^7.8.0
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+
+dev_dependencies:
+  auto_route_generator: ^7.3.2
+  freezed: ^2.4.5
+  build_runner: ^2.4.6
+  json_serializable: ^6.8.0
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/jsons/
