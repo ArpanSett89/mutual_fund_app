@@ -55,24 +55,21 @@ This project follows **Clean Architecture** principles with clear separation of 
 lib/
 ├── application/
 │   ├── auth/
-│   ├── scheme/
-│   └── scheme_details/
+│   ├── scheme_list/
 │
 ├── domain/
 │   ├── auth/
 │   ├── scheme/
-│   ├── scheme_details/
 │   └── core/
 │
 ├── infrastructure/
 │   ├── auth/
 │   ├── scheme/
-│   ├── scheme_details/
 │   └── core/
 │
 ├── presentation/
 │   ├── auth/
-│   ├── scheme/
+│   ├── scheme_list/
 │   ├── scheme_details/
 │   └── theme/
 │
