@@ -10,16 +10,12 @@ class Config {
   String get password => 'Password@1234';
 
   String get baseUrl {
-    // return http://15.206.73.155:9191
+    // return https://api.mfapi.in
     return '$schema$domain';
   }
 
   String get mfConstant {
     return '/mf';
-  }
-
-  String get analyticsUrlConstant {
-    return '/api/v1/analytics/';
   }
 
   String get schema {

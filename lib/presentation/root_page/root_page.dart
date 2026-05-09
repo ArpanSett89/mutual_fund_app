@@ -5,6 +5,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mutual_fund_app/application/auth/auth_bloc.dart';
+import 'package:mutual_fund_app/application/scheme_list/scheme_list_bloc.dart';
 import 'package:mutual_fund_app/application/user/user_bloc.dart';
 import 'package:mutual_fund_app/domain/core/utils/error_utils.dart';
 import 'package:mutual_fund_app/presentation/routes/router.gr.dart';
@@ -60,7 +61,9 @@ class RootPage extends StatelessWidget {
                   context.read<AuthBloc>().add(const AuthEvent.logout());
                 },
                 (success) async {
-                  // context.read<SchemeListBloc>().add(const SchemeListEvent.fetchSchemeList());
+                  context.read<SchemeListBloc>().add(
+                    const SchemeListEvent.fetchSchemeList(),
+                  );
                   await context.router.replaceAll(const [
                     RootPageRoute(),
                     SchemeListPageRoute(),
@@ -87,14 +90,21 @@ class _Splash extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            color: ThemeColors.primary,
-            // image: DecorationImage(
-            //   fit: BoxFit.fill,
-            //   image: AssetImage(PngImage.splashBackground),
-            // ),
+          decoration: const BoxDecoration(color: ThemeColors.primary),
+          child: Center(
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: ThemeColors.white.withValues(alpha: 0.1),
+              ),
+              child: const Icon(
+                Icons.account_balance_wallet_rounded,
+                size: 70,
+                color: ThemeColors.white,
+              ),
+            ),
           ),
-          child: Center(child: Icon(Icons.monetization_on)),
         ),
       ),
     );
